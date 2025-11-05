@@ -323,3 +323,46 @@ body.sticky-padding {
   }
 }
 
+.burger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+#navMenu {
+  display: flex;
+}
+
+#navMenu ul {
+  display: flex;
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  #navMenu {
+    display: none;
+    width: 100%;
+  }
+
+  #navMenu.active {
+    display: block;
+  }
+
+  #navMenu ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+  }
+
+  #mainHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
