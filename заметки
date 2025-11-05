@@ -1,33 +1,33 @@
 hr-portal/
-├── server/                      # Серверная часть (Express)
-│   ├── app.js                   # Точка входа сервера
-│   ├── routes/                  # Роуты (API endpoints)
-│   │   ├── employees.js         # Сотрудники
-│   │   ├── vacations.js         # Отпуска
-│   │   └── forms.js             # Анкеты
-│   ├── controllers/             # Логика обработки
+├── server/                      
+│   ├── app.js                 
+│   ├── routes/               
+│   │   ├── employees.js        
+│   │   ├── vacations.js        
+│   │   └── forms.js            
+│   ├── controllers/            
 │   │   ├── employeesController.js
 │   │   ├── vacationsController.js
 │   │   └── formsController.js
 │   ├── models/                  # Работа с базой данных
-│   │   ├── db.js                # Подключение к MySQL
+│   │   ├── db.js                
 │   │   ├── employeeModel.js
 │   │   ├── vacationModel.js
 │   │   └── formModel.js
-│   ├── middleware/              # Промежуточные функции (валидация, логгинг)
-│   └── .env                     # Конфигурация (пароли, порты)
+│   ├── middleware/
+│   └── .env                    
 │
-├── public/                      # Фронтенд (статические файлы)
+├── public/                    
 │   ├── css/
 │   │   └── style.css
 │   ├── js/
 │   │   └── main.js
 │   ├── images/
-│   └── index.html               # Главная страница
+│   └── index.html             
 │
-├── sql/                         # SQL-скрипты для создания таблиц
+├── sql/                        
 │   └── init.sql
 │
-├── package.json                 # Зависимости проекта
-├── README.md                    # Описание проекта
-└── .gitignore                   # Исключения для Git
+├── package.json                 
+├── README.md                   
+└── .gitignore                  
