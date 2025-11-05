@@ -16,7 +16,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const videoPlayer = document.getElementById("videoPlayer");
-  const sources = ["./videos/video1.mp4", "./videos/video2.mp4"];
+  const sources = [
+    "public/videos/video1.mp4",
+    "public/videos/video2.mp4"
+  ];
+
   let current = 0;
 
   if (videoPlayer) {
@@ -44,4 +48,9 @@ window.addEventListener("load", () => {
       }, 600);
     }, 2000);
   }
+});
+console.log("videoPlayer:", videoPlayer);
+console.log("sourceElement:", sourceElement);
+videoPlayer.addEventListener("error", () => {
+  console.error("Ошибка загрузки видео:", sourceElement.src);
 });
