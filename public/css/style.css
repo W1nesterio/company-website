@@ -339,6 +339,7 @@ footer::before {
     width: 220px;
     display: none;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
   }
 
   nav ul.active {
@@ -357,4 +358,17 @@ footer::before {
   .icon-shape {
     margin-bottom: 15px;
   }
+}
+
+/* === Адаптив для iPhone X и мелких экранов === */
+@media (max-width: 414px) {
+  .container-header { padding: 15px 20px; }
+  .logo img { width: 160px; }
+  nav ul { width: 180px; right: 15px; }
+  .role-block { gap: 15px; }
+  .icon-shape { width: 80px; height: 80px; }
+  .role-content h2 { font-size: 1.2rem; }
+  .join-section { padding: 60px 15px; }
+  .join-btn { padding: 10px 20px; font-size: 0.9rem; }
+  footer { padding: 30px 15px; gap: 20px; }
 }
