@@ -1,0 +1,91 @@
+/* Общие стили и header остаются как у тебя */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:"Open Sans",sans-serif; background:#f7f7f7; color:#333; overflow-x:hidden; padding-top:90px; }
+
+/* HEADER */
+.container-header { width:100%; background:#fff; display:flex; justify-content:space-between; align-items:center; padding:15px 50px; box-shadow:0 2px 10px rgba(0,0,0,0.1); position:fixed; top:0; left:0; z-index:100; }
+.logo img { width:260px; }
+nav ul { display:flex; list-style:none; gap:25px; }
+.item-header a { text-decoration:none; color:#222; font-weight:600; transition:color 0.3s; }
+.item-header a:hover { color:#2a7a2a; }
+.burger { display:none; font-size:28px; cursor:pointer; }
+.sticky { box-shadow:0 4px 15px rgba(0,0,0,0.2); background:#fff; transition:all 0.3s ease; }
+
+/* HERO */
+.career-hero { position:relative; width:100%; height:450px; overflow:hidden; }
+.career-hero img { width:100%; height:100%; object-fit:cover; animation:heroZoom 20s ease-in-out infinite alternate; }
+.hero-text { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); color:#fff; text-align:center; animation:textFade 2s ease forwards; }
+.hero-text h1 { font-size:3rem; text-shadow:2px 2px 15px rgba(0,0,0,0.7); }
+
+/* Декор */
+.decor-circle { position:absolute; border-radius:50%; opacity:0.3; animation:float 10s ease-in-out infinite alternate; }
+.decor-circle-1 { width:80px; height:80px; background:#2a7a2a; top:30px; left:20px; }
+.decor-circle-2 { width:120px; height:120px; background:#a5d6a7; bottom:40px; right:30px; }
+@keyframes heroZoom {0%{transform:scale(1);}50%{transform:scale(1.1);}100%{transform:scale(1);}}
+@keyframes textFade {0%{opacity:0;transform:translate(-50%,-40%);}100%{opacity:1;transform:translate(-50%,-50%);} }
+@keyframes float {0%{transform:translateY(0px);}50%{transform:translateY(-20px);}100%{transform:translateY(0px);}}
+
+/* ВАКАНСИИ */
+.career-main { max-width:1000px; margin:50px auto; padding:0 20px; position:relative; }
+.section-title { text-align:center; font-size:2rem; margin-bottom:40px; position:relative; }
+.section-title::after { content:""; display:block; width:100px; height:4px; background:#2a7a2a; margin:15px auto 0; border-radius:2px; }
+.vacancies-container { display:flex; flex-direction:column; gap:20px; position:relative; z-index:1; }
+
+.vacancies-decor { position:absolute; border-radius:50%; opacity:0.2; }
+.decor-left-circle { width:100px; height:100px; background:#a5d6a7; top:50px; left:-50px; animation:float 12s ease-in-out infinite alternate; }
+.decor-right-circle { width:150px; height:150px; background:#2a7a2a; bottom:100px; right:-75px; animation:float 15s ease-in-out infinite alternate; }
+
+.vacancy { border:2px solid #2a7a2a; border-radius:15px; padding:20px 25px; background:#fff; cursor:pointer; transition:all 0.4s ease; overflow:hidden; opacity:0; transform:translateY(20px); animation:fadeUp 0.8s forwards; }
+.vacancy:nth-child(1){animation-delay:0.2s;} .vacancy:nth-child(2){animation-delay:0.4s;} .vacancy:nth-child(3){animation-delay:0.6s;}
+.vacancy-title { font-weight:600; font-size:1.2rem; color:#2a7a2a; }
+.vacancy-description { max-height:0; overflow:hidden; margin-top:10px; color:#333; transition:max-height 0.5s ease, opacity 0.5s ease; opacity:0; }
+.vacancy.open .vacancy-description { max-height:400px; opacity:1; }
+.vacancy:hover { transform:translateY(-5px) scale(1.02); box-shadow:0 8px 25px rgba(0,0,0,0.15); }
+@keyframes fadeUp {0%{opacity:0;transform:translateY(20px);}100%{opacity:1;transform:translateY(0);}}
+
+/* RESUME FLEX */
+.resume-section { background:#f2f8f3; padding:100px 20px; position:relative; }
+.resume-flex-container { display:flex; flex-wrap:wrap; gap:30px; max-width:1200px; margin:0 auto; align-items:flex-start; justify-content:center; }
+
+.resume-container { flex:1 1 450px; background:#fff; padding:40px 50px; border-radius:15px; box-shadow:0 10px 25px rgba(0,0,0,0.1); position:relative; overflow:hidden; transition:transform 0.3s ease; }
+.resume-container:hover { transform:translateY(-5px);}
+.resume-container form label { display:block; font-weight:600; margin-top:15px; margin-bottom:5px;}
+.resume-container form input,
+.resume-container form select { width:100%; padding:12px 15px; border-radius:10px; border:1px solid #ccc; margin-bottom:12px; transition:border 0.3s, box-shadow 0.3s;}
+.resume-container form input:focus,
+.resume-container form select:focus { border-color:#2a7a2a; outline:none; box-shadow:0 0 8px #2a7a2a50; }
+.resume-container form button { margin-top:15px; padding:14px 30px; background:#2a7a2a; color:#fff; border:none; border-radius:30px; font-weight:600; cursor:pointer; transition:background 0.3s, transform 0.2s; }
+.resume-container form button:hover { background:#236623; transform:scale(1.05); }
+.decor-left,.decor-right { position:absolute; width:80px; height:80px; background:#a5d6a7; border-radius:50%; opacity:0.4; top:-20px; animation: float 6s ease-in-out infinite alternate;}
+.decor-left { left:-30px; }
+.decor-right { right:-30px; animation-delay:2s; }
+
+/* HR DEPARTMENT СПРАВА */
+.hr-department { flex:1 1 300px; background:#fff; padding:20px 25px; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.1); text-align:center; }
+.hr-department h3 { font-size:1.4rem; margin:15px 0; color:#2a7a2a; }
+.hr-department ul { list-style:none; padding:0; text-align:left; }
+.hr-department li { margin-bottom:10px; opacity:0; transform:translateY(20px); animation:fadeUp 0.8s forwards; }
+.hr-department li:nth-child(1){animation-delay:0.2s;}
+.hr-department li:nth-child(2){animation-delay:0.4s;}
+.hr-department li:nth-child(3){animation-delay:0.6s;}
+.hr-photo { width:100%; max-width:250px; border-radius:10px; margin-bottom:10px; }
+
+/* FOOTER */
+footer { background:#000; color:#fff; padding:60px 20px 30px; display:flex; flex-wrap:wrap; justify-content:space-between; gap:20px; }
+.footer-section { flex:1 1 200px; }
+.footer-section h3 { font-size:1.2rem; margin-bottom:10px; color:#fff; }
+.footer-section a { color:#f2f2f2; text-decoration:none; }
+.footer-section a:hover { color:#cce3cc; }
+.footer-bottom { width:100%; text-align:center; margin-top:20px; font-size:0.95rem; color:#ccc; }
+
+/* MEDIA */
+@media (max-width:900px) {
+  nav ul { flex-direction:column; position:absolute; top:70px; right:0; width:220px; display:none; background:#fff; box-shadow:0 4px 15px rgba(0,0,0,0.1);}
+  nav ul.active{display:flex;}
+  .burger{display:block;}
+  .career-hero{height:350px;}
+  .hero-text h1{font-size:2rem;}
+  .resume-flex-container { flex-direction:column; }
+  .resume-container, .hr-department { flex:1 1 100%; }
+  .resume-container{padding:30px 25px;}
+}

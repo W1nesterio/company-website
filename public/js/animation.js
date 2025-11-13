@@ -30,27 +30,49 @@ document.addEventListener("DOMContentLoaded", function () {
       videoPlayer.play();
     });
   }
+
+  // Анимация появления нижнего блока
+  const join = document.querySelector(".join-content");
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          join.style.opacity = "1";
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+  observer.observe(join);
+
+  // Burger menu
+  document.getElementById("burger").addEventListener("click", function () {
+    const navMenu = document.getElementById("navMenu");
+    navMenu.classList.toggle("active");
+  });
 });
 
+// === Preloader ===
 window.addEventListener("load", () => {
   const preloader = document.getElementById("preloader");
-
-  document.body.classList.add("loading");
-  document.documentElement.classList.add("loading");
-
   if (preloader) {
+    preloader.classList.add("hidden"); // плавное исчезновение
     setTimeout(() => {
-      preloader.style.opacity = "0";
-      setTimeout(() => {
-        preloader.style.display = "none";
-        document.body.classList.remove("loading");
-        document.documentElement.classList.remove("loading");
-      }, 600);
-    }, 2000);
+      preloader.style.display = "none";
+    }, 600);
   }
 });
-console.log("videoPlayer:", videoPlayer);
-console.log("sourceElement:", sourceElement);
-videoPlayer.addEventListener("error", () => {
-  console.error("Ошибка загрузки видео:", sourceElement.src);
+
+// Проверка видео на ошибки
+const videoPlayer = document.getElementById("videoPlayer");
+if (videoPlayer) {
+  videoPlayer.addEventListener("error", () => {
+    console.error("Ошибка загрузки видео:", videoPlayer.currentSrc);
+  });
+};
+
+// Burger menu
+document.getElementById("burger").addEventListener("click", function () {
+  const navMenu = document.getElementById("navMenu");
+  navMenu.classList.toggle("active");
 });

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Карьера | Ивацевичдрев</title>
+  
+  <link rel="stylesheet" href="public/css/career.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header id="mainHeader" class="container-header">
+    <div class="logo">
+      <img src="public/image/Ivacevichdre.png" alt="Ивацевичдрев логотип" width="260" />
+    </div>
+    <div class="burger" id="burger">&#9776;</div>
+    <nav id="navMenu">
+      <ul>
+        <li class="item-header"><a href="index.html">Главная</a></li>
+        <li class="item-header"><a href="career.html">Карьера</a></li>
+        <li class="item-header"><a href="about.html">О компании</a></li>
+        <li class="item-header"><a href="#">Соискателю</a></li>
+        <li class="item-header"><a href="#">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="career-hero">
+    <img src="https://grandschool.net/media/meets/a8fdf684d698d4d08aa9_FQfOIGP.jpg" alt="Карьера и вакансии" />
+    <div class="hero-text">
+      <h1>Карьера и вакансии</h1>
+    </div>
+    <div class="decor-circle decor-circle-1"></div>
+    <div class="decor-circle decor-circle-2"></div>
+  </section>
+
+  <main class="career-main">
+    <h2 class="section-title">Вакансии</h2>
+    <div class="vacancies-decor decor-left-circle"></div>
+    <div class="vacancies-decor decor-right-circle"></div>
+
+    <div class="vacancies-container">
+  <div class="vacancy">
+    <div class="vacancy-title">Грузчик</div>
+    <div class="vacancy-description">
+      <p>Обязанности: погрузка и разгрузка материалов, сортировка и хранение продукции, поддержание порядка на складе.</p>
+      <p>Требования: внимательность, физическая выносливость, опыт работы приветствуется.</p>
+      <p>Зарплата: 800–1000 BYN</p>
+    </div>
+  </div>
+  <div class="vacancy">
+    <div class="vacancy-title">Водитель погрузчика</div>
+    <div class="vacancy-description">
+      <p>Обязанности: управление погрузочной техникой, перемещение паллет с продукцией, соблюдение техники безопасности.</p>
+      <p>Требования: водительские права категории C, опыт работы на складе или производстве.</p>
+      <p>Зарплата: 1200–1500 BYN</p>
+    </div>
+  </div>
+  <div class="vacancy">
+    <div class="vacancy-title">Оператор на автоматических и полуавтоматических линиях</div>
+    <div class="vacancy-description">
+      <p>Обязанности: контроль работы линий, проверка качества продукции, устранение мелких неисправностей.</p>
+      <p>Требования: внимательность, ответственность, техническое образование приветствуется.</p>
+      <p>Зарплата: 1000–1300 BYN</p>
+    </div>
+  </div>
+  <div class="vacancy">
+    <div class="vacancy-title">Менеджер по закупкам</div>
+    <div class="vacancy-description">
+      <p>Обязанности: поиск поставщиков, ведение переговоров, оформление заказов и контроль поставок.</p>
+      <p>Требования: опыт работы, аналитическое мышление, коммуникабельность.</p>
+      <p>Зарплата: 1500–1800 BYN</p>
+    </div>
+  </div>
+  <div class="vacancy">
+    <div class="vacancy-title">Кладовщик</div>
+    <div class="vacancy-description">
+      <p>Обязанности: контроль складских запасов, прием и выдача материалов, ведение документации.</p>
+      <p>Требования: внимательность, аккуратность, опыт работы приветствуется.</p>
+      <p>Зарплата: 900–1200 BYN</p>
+    </div>
+  </div>
+  <div class="vacancy">
+    <div class="vacancy-title">Техник по ремонту оборудования</div>
+    <div class="vacancy-description">
+      <p>Обязанности: профилактика и ремонт оборудования, устранение неисправностей, поддержка производственного процесса.</p>
+      <p>Требования: техническое образование, опыт работы с механизмами.</p>
+      <p>Зарплата: 1300–1600 BYN</p>
+    </div>
+  </div>
+</div>
+
+  </main>
+
+  <section class="resume-section">
+    <h2 class="section-title">Отправка резюме</h2>
+    <div class="resume-flex-container">
+      <!-- ФОРМА СЛЕВА -->
+      <div class="resume-container">
+        <div class="decor-left"></div>
+        <div class="decor-right"></div>
+
+        <form id="resumeForm">
+          <label for="name">Имя и Фамилия</label>
+          <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Введите email" required>
+
+          <label for="phone">Телефон</label>
+          <input type="tel" id="phone" name="phone" placeholder="+375 XX XXX XX XX" required>
+
+          <label for="position">Желаемая должность</label>
+          <select id="position" name="position" required>
+            <option value="">Выберите вакансию</option>
+            <option>Грузчик</option>
+            <option>Водитель погрузчика</option>
+            <option>Оператор на автоматических линиях</option>
+          </select>
+
+          <label for="resume">Загрузите резюме</label>
+          <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+
+          <button type="submit">Отправить</button>
+        </form>
+      </div>
+
+      <div class="hr-department">
+        <img src="https://s16.stc.all.kpcdn.net/russia/wp-content/uploads/2022/12/luchshie-kursy-anglijskogo-yazyka-dlya-vzroslyh-v-Moskve-Evroshkola.jpg" alt="Отдел кадров" class="hr-photo">
+        <h3>Отдел кадров</h3>
+        <ul>
+          <li class="hr-person">Ирина Петрова —  +375 29 123-45-67</li>
+          <li class="hr-person">Сергей Иванов —  +375 29 234-56-78</li>
+          <li class="hr-person">Ольга Смирнова —  +375 29 345-67-89</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-section">
+      <h3>Контакты</h3>
+      <p>📞 Телефон: +375 (XX) XXX-XX-XX</p>
+      <p>📧 Email: example@ivacevichdrev.by</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Адрес</h3>
+      <p>г. Ивацевичи, ул. Промышленная, 5</p>
+      <p>Республика Беларусь</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Мы в соцсетях</h3>
+      <a href="#">VK</a><br />
+      <a href="#">Telegram</a><br />
+      <a href="#">YouTube</a>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Ивацевичдрев. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="public/js/career.js"></script>
+</body>
+</html>
